@@ -11,11 +11,80 @@
             <a href="#" class="logo">Logo</a>
 
             <ul>
-                <li><a href="#">Home</a></li>
+                <li><a href="#" class="active">Home</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Projects</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
         </header>
+
+        <section>
+            <img src="images/stars.png" id='stars'>
+            <img src="images/moon.png" id='moon'>
+            <img src="images/mountains_behind.png" id='mountains_behind'>
+            <h2 id="text">Moon Light</h2>
+            <a href="#sec" class="btn">Explore</a>
+            <img src="images/mountains_front.png" id='mountains_front'>
+        </section>
+        <div class="sec" id="sec">
+            <h2>Parallax Scrolling Effects</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente,
+                 molestiae id sunt minima dolorem nulla harum voluptatum excepturi repudiandae aliquam aspernatur nemo est 
+                 quas officia odit necessitatibus, magnam, cum fuga. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae provident autem a corrupti repellendus 
+                 atque earum dolorum molestiae ullam, consequuntur, eius dicta delectus maxime minus? Cum veniam quidem nemo eaque. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente,
+                 molestiae id sunt minima dolorem nulla harum voluptatum excepturi repudiandae aliquam aspernatur nemo est 
+                 quas officia odit necessitatibus, magnam, cum fuga. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae provident autem a corrupti repellendus 
+                 atque earum dolorum molestiae ullam, consequuntur, eius dicta delectus maxime minus? Cum veniam quidem nemo eaque.<br><br>
+                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente,
+                 molestiae id sunt minima dolorem nulla harum voluptatum excepturi repudiandae aliquam aspernatur nemo est 
+                 quas officia odit necessitatibus, magnam, cum fuga. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae provident autem a corrupti repellendus 
+                 atque earum dolorum molestiae ullam, consequuntur, eius dicta delectus maxime minus? Cum veniam quidem nemo eaque.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente,
+                 molestiae id sunt minima dolorem nulla harum voluptatum excepturi repudiandae aliquam aspernatur nemo est 
+                 quas officia odit necessitatibus, magnam, cum fuga. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae provident autem a corrupti repellendus 
+                 atque earum dolorum molestiae ullam, consequuntur, eius dicta delectus maxime minus? Cum veniam quidem nemo eaque.<br><br>
+                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente,
+                 molestiae id sunt minima dolorem nulla harum voluptatum excepturi repudiandae aliquam aspernatur nemo est 
+                 quas officia odit necessitatibus, magnam, cum fuga. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae provident autem a corrupti repellendus 
+                 atque earum dolorum molestiae ullam, consequuntur, eius dicta delectus maxime minus? Cum veniam quidem nemo eaque.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente,
+                 molestiae id sunt minima dolorem nulla harum voluptatum excepturi repudiandae aliquam aspernatur nemo est 
+                 quas officia odit necessitatibus, magnam, cum fuga. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae provident autem a corrupti repellendus 
+                 atque earum dolorum molestiae ullam, consequuntur, eius dicta delectus maxime minus? Cum veniam quidem nemo eaque.
+                 <br><br>
+                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente,
+                 molestiae id sunt minima dolorem nulla harum voluptatum excepturi repudiandae aliquam aspernatur nemo est 
+                 quas officia odit necessitatibus, magnam, cum fuga. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae provident autem a corrupti repellendus 
+                 atque earum dolorum molestiae ullam, consequuntur, eius dicta delectus maxime minus? Cum veniam quidem nemo eaque.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente,
+                 molestiae id sunt minima dolorem nulla harum voluptatum excepturi repudiandae aliquam aspernatur nemo est 
+                 quas officia odit necessitatibus, magnam, cum fuga. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae provident autem a corrupti repellendus 
+                 atque earum dolorum molestiae ullam, consequuntur, eius dicta delectus maxime minus? Cum veniam quidem nemo eaque.
+                </p><br><br>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente,
+                molestiae id sunt minima dolorem nulla harum voluptatum excepturi repudiandae aliquam aspernatur nemo est 
+                quas officia odit necessitatibus, magnam, cum fuga. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae provident autem a corrupti repellendus 
+                atque earum dolorum molestiae ullam, consequuntur, eius dicta delectus maxime minus? Cum veniam quidem nemo eaque.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente,
+                molestiae id sunt minima dolorem nulla harum voluptatum excepturi repudiandae aliquam aspernatur nemo est 
+                quas officia odit necessitatibus, magnam, cum fuga. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae provident autem a corrupti repellendus 
+                atque earum dolorum molestiae ullam, consequuntur, eius dicta delectus maxime minus? Cum veniam quidem nemo eaque.
+               </p>
+                </p>
+        </div>
+
+        <script>
+            let stars = document.getElementById('stars');
+            let moon = document.getElementById('moon');
+            let mountains_behind = document.getElementById('mountains_behind');
+            let text = document.getElementById('text');
+            let btn = document.getElementById('btn');
+            let mountains_front = document.getElementById('mountains_front');
+
+            window.addEventListener('scroll', function(){
+                let value = window.scrollY;
+                stars.style.left = value * 0.25 + 'px';
+                moon.style.top = value * 1.05 + 'px';
+                mountains_behind.style.top = value * 0.5 + 'px';
+                mountains_front.style.top = value * 0 + 'px';
+                text.style.marginRight = value * 4 + 'px';
+            })
+        </script>
     </body>
 </html>
